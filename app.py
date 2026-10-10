@@ -6,13 +6,13 @@ from openpyxl.utils import get_column_letter
 from collections import OrderedDict
 from datetime import datetime
 
-st.set_page_config(page_title="Excel 需求轉換工具", page_icon="📊", layout="wide")
+st.set_page_config(page_title="DSN 需求轉換工具", page_icon="📊", layout="wide")
 
-st.title("Excel 需求轉換工具")
-st.write("上傳 old.xlsx，網站會自動轉換並產生可下載的 new.xlsx。")
+st.title("DSN 需求轉換工具")
+st.write("上傳原始檔，網站會自動轉換並產生可下載的更新檔")
 st.markdown("""
 **使用方式**
-1. 上傳來源 Excel（old.xlsx）
+1. 上傳來源原始檔
 2. 按下「開始轉換」
 3. 下載轉換後的 new.xlsx
 """)
@@ -335,4 +335,4 @@ if uploaded is not None:
             st.error(f"轉換失敗：{e}")
             st.info("請確認上傳的是正確的 old.xlsx，且欄位名稱和週別格式符合原始程式的要求。")
 else:
-    st.caption("請先上傳 old.xlsx。")
+    st.caption("請先上傳原始檔")
